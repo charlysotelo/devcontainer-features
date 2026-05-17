@@ -13,7 +13,7 @@ fi
 
 if [ "${VERSION}" = "latest" ]; then
     VERSION=$(curl -fsSL "https://api.github.com/repos/doudar/Openpelo/releases/latest" \
-        | grep -o '"tag_name":"[^"]*"' | cut -d'"' -f4)
+        | grep '"tag_name"' | sed 's/.*"tag_name": *"\([^"]*\)".*/\1/')
     echo "Resolved latest version: ${VERSION}"
 fi
 
