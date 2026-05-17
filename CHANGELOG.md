@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/charlysotelo/devcontainer-features/compare/devcontainer-features-v2.0.1...devcontainer-features-v2.0.2) (2026-05-17)
+
+
+### Bug Fixes
+
+* **openpelo:** install libgl1-mesa-dri for software EGL/llvmpipe renderer ([4fa4e03](https://github.com/charlysotelo/devcontainer-features/commit/4fa4e03237ebdbb534c1b0649b1f8847d98e56d6))
+
 ## [2.0.1](https://github.com/charlysotelo/devcontainer-features/compare/devcontainer-features-v2.0.0...devcontainer-features-v2.0.1) (2026-05-17)
 
 

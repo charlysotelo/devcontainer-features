@@ -1,6 +1,6 @@
 {
     "id": "openpelo",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "name": "OpenPelo",
     "description": "Installs OpenPelo, an Android device manager and app installer for workout machines and other Android devices.",
     "documentationURL": "https://github.com/doudar/Openpelo",
