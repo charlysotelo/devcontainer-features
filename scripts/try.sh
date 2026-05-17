@@ -13,7 +13,6 @@ set -eo pipefail
 FEATURE="${1:?Usage: $(basename "$0") <feature-name> [base-image]}"
 BASE_IMAGE="${2:-ubuntu:24.04}"
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-TMP_CONFIG="$REPO_ROOT/.devcontainer.json"
 
 if [ ! -d "$REPO_ROOT/src/$FEATURE" ]; then
     echo "Error: feature '$FEATURE' not found under src/." >&2
@@ -27,15 +26,19 @@ if ! command -v devcontainer &>/dev/null; then
     exit 1
 fi
 
-trap "rm -f '$TMP_CONFIG'" EXIT
+# The devcontainer CLI requires local feature paths to be children of the
+# .devcontainer/ folder. We create a temp workspace with that layout.
+TMP_WORKSPACE=$(mktemp -d)
+trap "rm -rf '$TMP_WORKSPACE'" EXIT
 
-# Config is written at the repo root so that the local feature path
-# './src/<feature>' resolves correctly relative to this file.
-cat > "$TMP_CONFIG" <<EOF
+mkdir -p "$TMP_WORKSPACE/.devcontainer/$FEATURE"
+cp -r "$REPO_ROOT/src/$FEATURE/." "$TMP_WORKSPACE/.devcontainer/$FEATURE/"
+
+cat > "$TMP_WORKSPACE/.devcontainer/devcontainer.json" <<EOF
 {
   "image": "${BASE_IMAGE}",
   "features": {
-    "./src/${FEATURE}": {}
+    "./${FEATURE}": {}
   }
 }
 EOF
@@ -44,5 +47,5 @@ echo "🚀 Feature:    ${FEATURE}"
 echo "   Base image: ${BASE_IMAGE}"
 echo ""
 
-devcontainer up --workspace-folder "$REPO_ROOT" --config "$TMP_CONFIG"
-devcontainer exec --workspace-folder "$REPO_ROOT" --config "$TMP_CONFIG" bash
+devcontainer up --workspace-folder "$TMP_WORKSPACE"
+devcontainer exec --workspace-folder "$TMP_WORKSPACE" bash
