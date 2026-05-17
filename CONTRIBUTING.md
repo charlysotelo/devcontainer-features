@@ -53,6 +53,67 @@ You should **never manually edit** `version.txt`, `devcontainer-feature.json` ve
 
 See the checklist in [`.github/copilot-instructions.md`](.github/copilot-instructions.md).
 
+Every new feature must be registered in **5 places**:
+
+### 1. Feature files (required by devcontainers spec)
+
+```
+src/<feature-name>/devcontainer-feature.json   # metadata
+src/<feature-name>/install.sh                  # install logic (chmod +x)
+src/<feature-name>/version.txt                 # initial value: 1.0.0
+test/<feature-name>/test.sh                    # at minimum: check binary, reportResults
+```
+
+### 2. `.github/workflows/test.yml` — two spots
+
+Add a filter entry under `dorny/paths-filter`:
+```yaml
+<feature-name>:
+  - 'src/<feature-name>/**'
+  - 'test/<feature-name>/**'
+```
+
+Add the name to the `workflow_dispatch` hardcoded array:
+```yaml
+echo 'features=["copilot","openpelo","<feature-name>"]' >> $GITHUB_OUTPUT
+```
+
+### 3. `release-please-config.json`
+
+Add a package entry so release-please tracks and versions it:
+```json
+"src/<feature-name>": {
+  "release-type": "simple",
+  "component": "<feature-name>",
+  "changelog-path": "src/<feature-name>/CHANGELOG.md",
+  "extra-files": [
+    {
+      "type": "json",
+      "path": "src/<feature-name>/devcontainer-feature.json",
+      "jsonpath": "$.version"
+    }
+  ]
+}
+```
+
+### 4. `.release-please-manifest.json`
+
+Seed the initial version:
+```json
+"src/<feature-name>": "1.0.0"
+```
+
+### 5. Bootstrap GitHub release (one-time)
+
+Create an initial release so release-please has a baseline and doesn't scan the full commit history:
+```bash
+gh release create <feature-name>-v1.0.0 --title "<feature-name> v1.0.0" --notes "Initial release" --target main
+```
+
+### 6. `README.md`
+
+Add a row to the features table.
+
 ## Testing
 
 ```bash
