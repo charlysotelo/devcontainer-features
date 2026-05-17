@@ -7,6 +7,7 @@ Personal collection of [Dev Container Features](https://containers.dev/implement
 | Feature | Description |
 |---------|-------------|
 | [copilot](src/copilot) | Installs the GitHub Copilot CLI via the official install script |
+| [openpelo](src/openpelo) | Installs [OpenPelo](https://github.com/doudar/Openpelo), an Android device manager for workout machines |
 
 ## Usage
 

@@ -1,0 +1,21 @@
+{
+    "id": "openpelo",
+    "version": "1.0.0",
+    "name": "OpenPelo",
+    "description": "Installs OpenPelo, an Android device manager and app installer for workout machines and other Android devices.",
+    "documentationURL": "https://github.com/doudar/Openpelo",
+    "licenseURL": "https://github.com/doudar/Openpelo/blob/main/LICENSE",
+    "keywords": [
+        "openpelo",
+        "android",
+        "adb",
+        "peloton"
+    ],
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Version of OpenPelo to install (e.g. 'v1.0.65'). Use 'latest' for the most recent release."
+        }
+    }
+}

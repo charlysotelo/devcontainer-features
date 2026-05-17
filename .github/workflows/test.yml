@@ -8,7 +8,27 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      copilot: ${{ steps.filter.outputs.copilot }}
+      openpelo: ${{ steps.filter.outputs.openpelo }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            copilot:
+              - 'src/copilot/**'
+              - 'test/copilot/**'
+            openpelo:
+              - 'src/openpelo/**'
+              - 'test/openpelo/**'
+
+  test-copilot:
+    needs: changes
+    if: needs.changes.outputs.copilot == 'true' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -18,9 +38,25 @@ jobs:
           - ubuntu:24.04
     steps:
       - uses: actions/checkout@v4
-
       - name: Install devcontainer CLI
         run: npm install -g @devcontainers/cli
-
       - name: Test copilot feature on ${{ matrix.baseImage }}
         run: devcontainer features test --skip-scenarios -f copilot -i ${{ matrix.baseImage }} .
+
+  test-openpelo:
+    needs: changes
+    if: needs.changes.outputs.openpelo == 'true' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        baseImage:
+          - ubuntu:22.04
+          - ubuntu:24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install devcontainer CLI
+        run: npm install -g @devcontainers/cli
+      - name: Test openpelo feature on ${{ matrix.baseImage }}
+        run: devcontainer features test --skip-scenarios -f openpelo -i ${{ matrix.baseImage }} .
+
