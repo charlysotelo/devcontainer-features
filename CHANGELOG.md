@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.0](https://github.com/charlysotelo/devcontainer-features/compare/devcontainer-features-v1.2.0...devcontainer-features-v2.0.0) (2026-05-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove copilot feature
+
+### Features
+
+* remove copilot feature ([9b97172](https://github.com/charlysotelo/devcontainer-features/commit/9b971720b37a87b624687d24a45134c774c59951))
+
+
+### Bug Fixes
+
+* **openpelo:** install GTK3 and Flutter Linux runtime dependencies ([e1fa539](https://github.com/charlysotelo/devcontainer-features/commit/e1fa539e313e4e5e4ceb4447fb78ffa4259acc0d))
+* **openpelo:** run update-ca-certificates after GTK package install ([34afc83](https://github.com/charlysotelo/devcontainer-features/commit/34afc832acc259707856a04bdd1836f5ae44fcbc))
+* set base-path-to-features to ./src ([aa7ac54](https://github.com/charlysotelo/devcontainer-features/commit/aa7ac5413b3b3177c19bfe0539027ef4d7350c3e))
+
 ## [1.2.0](https://github.com/charlysotelo/devcontainer-features/compare/devcontainer-features-v1.1.0...devcontainer-features-v1.2.0) (2026-05-17)
 
 
