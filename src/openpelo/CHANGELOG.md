@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/charlysotelo/devcontainer-features/compare/openpelo-v1.0.2...openpelo-v1.0.3) (2026-05-17)
+
+
+### Bug Fixes
+
+* correct release-please extra-files paths and sync feature versions ([607e7c0](https://github.com/charlysotelo/devcontainer-features/commit/607e7c0e7ac395186723e9ec473678094fa784bf))
+* **openpelo:** add libegl1 and libgl1 for Flutter EGL renderer ([9ac72c9](https://github.com/charlysotelo/devcontainer-features/commit/9ac72c9cccb68a03b281d80be3194f2f36cb0913))
+
 ## [1.0.2](https://github.com/charlysotelo/devcontainer-features/compare/openpelo-v1.0.1...openpelo-v1.0.2) (2026-05-17)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/charlysotelo/devcontainer-features/compare/bitwarden-cli-v1.1.0...bitwarden-cli-v1.1.1) (2026-05-17)
+
+
+### Bug Fixes
+
+* correct release-please extra-files paths and sync feature versions ([607e7c0](https://github.com/charlysotelo/devcontainer-features/commit/607e7c0e7ac395186723e9ec473678094fa784bf))
+
 ## [1.1.0](https://github.com/charlysotelo/devcontainer-features/compare/bitwarden-cli-v1.0.0...bitwarden-cli-v1.1.0) (2026-05-17)
 
 

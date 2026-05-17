@@ -1,6 +1,6 @@
 {
     "id": "bitwarden-cli",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "name": "Bitwarden CLI",
     "description": "Installs the Bitwarden CLI (bw), fetching the latest release from github.com/bitwarden/clients.",
     "documentationURL": "https://bitwarden.com/help/cli/",
