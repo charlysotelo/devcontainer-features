@@ -9,11 +9,11 @@
     "src/openpelo": {
       "release-type": "simple",
       "component": "openpelo",
-      "changelog-path": "src/openpelo/CHANGELOG.md",
+      "changelog-path": "CHANGELOG.md",
       "extra-files": [
         {
           "type": "json",
-          "path": "src/openpelo/devcontainer-feature.json",
+          "path": "devcontainer-feature.json",
           "jsonpath": "$.version"
         }
       ]
@@ -21,11 +21,11 @@
     "src/talosctl": {
       "release-type": "simple",
       "component": "talosctl",
-      "changelog-path": "src/talosctl/CHANGELOG.md",
+      "changelog-path": "CHANGELOG.md",
       "extra-files": [
         {
           "type": "json",
-          "path": "src/talosctl/devcontainer-feature.json",
+          "path": "devcontainer-feature.json",
           "jsonpath": "$.version"
         }
       ]
@@ -33,11 +33,11 @@
     "src/bitwarden-cli": {
       "release-type": "simple",
       "component": "bitwarden-cli",
-      "changelog-path": "src/bitwarden-cli/CHANGELOG.md",
+      "changelog-path": "CHANGELOG.md",
       "extra-files": [
         {
           "type": "json",
-          "path": "src/bitwarden-cli/devcontainer-feature.json",
+          "path": "devcontainer-feature.json",
           "jsonpath": "$.version"
         }
       ]
@@ -45,11 +45,11 @@
     "src/atuin": {
       "release-type": "simple",
       "component": "atuin",
-      "changelog-path": "src/atuin/CHANGELOG.md",
+      "changelog-path": "CHANGELOG.md",
       "extra-files": [
         {
           "type": "json",
-          "path": "src/atuin/devcontainer-feature.json",
+          "path": "devcontainer-feature.json",
           "jsonpath": "$.version"
         }
       ]

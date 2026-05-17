@@ -1,6 +1,6 @@
 {
     "id": "atuin",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "Atuin",
     "description": "Installs Atuin, a magical shell history replacement backed by a SQLite database.",
     "documentationURL": "https://atuin.sh",
