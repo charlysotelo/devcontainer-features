@@ -13,7 +13,7 @@ set -eo pipefail
 FEATURE="${1:?Usage: $(basename "$0") <feature-name> [base-image]}"
 BASE_IMAGE="${2:-ubuntu:24.04}"
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-TMP_CONFIG="$REPO_ROOT/.tmp-try-feature.json"
+TMP_CONFIG="$REPO_ROOT/.devcontainer.json"
 
 if [ ! -d "$REPO_ROOT/src/$FEATURE" ]; then
     echo "Error: feature '$FEATURE' not found under src/." >&2
