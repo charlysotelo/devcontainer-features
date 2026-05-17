@@ -6,18 +6,6 @@
       "component": "devcontainer-features",
       "changelog-path": "CHANGELOG.md"
     },
-    "src/copilot": {
-      "release-type": "simple",
-      "component": "copilot",
-      "changelog-path": "src/copilot/CHANGELOG.md",
-      "extra-files": [
-        {
-          "type": "json",
-          "path": "src/copilot/devcontainer-feature.json",
-          "jsonpath": "$.version"
-        }
-      ]
-    },
     "src/openpelo": {
       "release-type": "simple",
       "component": "openpelo",

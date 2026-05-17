@@ -19,9 +19,6 @@ jobs:
         id: filter
         with:
           filters: |
-            copilot:
-              - 'src/copilot/**'
-              - 'test/copilot/**'
             openpelo:
               - 'src/openpelo/**'
               - 'test/openpelo/**'
@@ -39,7 +36,7 @@ jobs:
         id: set-features
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo 'features=["copilot","openpelo","talosctl","bitwarden-cli","atuin"]' >> $GITHUB_OUTPUT
+            echo 'features=["openpelo","talosctl","bitwarden-cli","atuin"]' >> $GITHUB_OUTPUT
           else
             echo 'features=${{ steps.filter.outputs.changes }}' >> $GITHUB_OUTPUT
           fi
