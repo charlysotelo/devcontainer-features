@@ -7,10 +7,11 @@ INSTALL_DIR="/opt/openpelo"
 
 echo "Installing OpenPelo..."
 
-# Flutter Linux desktop runtime dependencies
+# Flutter Linux desktop runtime dependencies + CA certs for curl
 apt-get update -y
 apt-get install -y --no-install-recommends \
     curl \
+    ca-certificates \
     libgtk-3-0 \
     libglib2.0-0 \
     libpango-1.0-0 \
@@ -26,6 +27,7 @@ apt-get install -y --no-install-recommends \
     libxrandr2 \
     libxrender1 \
     libxtst6
+update-ca-certificates
 
 if [ "${VERSION}" = "latest" ]; then
     VERSION=$(curl -fsSL "https://api.github.com/repos/doudar/Openpelo/releases/latest" \
