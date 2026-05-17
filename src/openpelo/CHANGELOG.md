@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/charlysotelo/devcontainer-features/compare/openpelo-v1.0.4...openpelo-v1.0.5) (2026-05-17)
+
+
+### Bug Fixes
+
+* **openpelo:** add full Flutter GL/GLES runtime deps ([4a29ac0](https://github.com/charlysotelo/devcontainer-features/commit/4a29ac055601d62ce2f369b332b25a0a8f3013f0))
+
 ## [1.0.4](https://github.com/charlysotelo/devcontainer-features/compare/openpelo-v1.0.3...openpelo-v1.0.4) (2026-05-17)
 
 

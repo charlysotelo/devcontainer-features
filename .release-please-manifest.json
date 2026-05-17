@@ -1,6 +1,6 @@
 {
-  ".": "2.0.2",
-  "src/openpelo": "1.0.4",
+  ".": "2.0.3",
+  "src/openpelo": "1.0.5",
   "src/talosctl": "1.0.0",
   "src/bitwarden-cli": "1.1.1",
   "src/atuin": "1.1.1"
