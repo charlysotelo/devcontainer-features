@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/charlysotelo/devcontainer-features/compare/devcontainer-features-v2.0.2...devcontainer-features-v2.0.3) (2026-05-17)
+
+
+### Bug Fixes
+
+* **openpelo:** add full Flutter GL/GLES runtime deps ([4a29ac0](https://github.com/charlysotelo/devcontainer-features/commit/4a29ac055601d62ce2f369b332b25a0a8f3013f0))
+
 ## [2.0.2](https://github.com/charlysotelo/devcontainer-features/compare/devcontainer-features-v2.0.1...devcontainer-features-v2.0.2) (2026-05-17)
 
 
