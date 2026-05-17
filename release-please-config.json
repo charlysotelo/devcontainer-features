@@ -29,6 +29,18 @@
           "jsonpath": "$.version"
         }
       ]
+    },
+    "src/talosctl": {
+      "release-type": "simple",
+      "component": "talosctl",
+      "changelog-path": "src/talosctl/CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "src/talosctl/devcontainer-feature.json",
+          "jsonpath": "$.version"
+        }
+      ]
     }
   }
 }

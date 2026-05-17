@@ -1,0 +1,14 @@
+{
+    "id": "talosctl",
+    "version": "1.0.0",
+    "name": "talosctl",
+    "description": "Installs talosctl, the CLI for managing Talos Linux Kubernetes clusters.",
+    "documentationURL": "https://talos.dev",
+    "licenseURL": "https://github.com/siderolabs/talos/blob/main/LICENSE",
+    "keywords": [
+        "talos",
+        "talosctl",
+        "kubernetes",
+        "k8s"
+    ]
+}
