@@ -29,7 +29,10 @@ apt-get install -y --no-install-recommends \
     libxtst6 \
     libegl1 \
     libgl1 \
-    libgl1-mesa-dri
+    libgl1-mesa-dri \
+    libgles2 \
+    libgbm1 \
+    libvulkan1
 update-ca-certificates
 
 if [ "${VERSION}" = "latest" ]; then
