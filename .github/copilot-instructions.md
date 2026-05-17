@@ -66,6 +66,6 @@ Version files: `version.txt` is the primary version file per package. `devcontai
 1. Create `src/<feature-name>/devcontainer-feature.json` and `install.sh`
 2. Create `test/<feature-name>/test.sh`
 3. Create `src/<feature-name>/version.txt` with initial value `1.0.0`
-4. Add a job for the feature in `.github/workflows/test.yml` (copy an existing job, update the feature name and paths-filter entry)
+4. Add a job for the feature in `.github/workflows/test.yml`: add an entry to the `filters` in the `changes` job, and add the feature name to the `workflow_dispatch` hardcoded array
 5. Add the feature as a package in `release-please-config.json` and seed its version in `.release-please-manifest.json`
 6. Add a row to the features table in `README.md`

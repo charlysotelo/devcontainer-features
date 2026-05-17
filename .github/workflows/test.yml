@@ -11,10 +11,10 @@ jobs:
   changes:
     runs-on: ubuntu-latest
     outputs:
-      copilot: ${{ steps.filter.outputs.copilot }}
-      openpelo: ${{ steps.filter.outputs.openpelo }}
+      features: ${{ steps.set-features.outputs.features }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: dorny/paths-filter@v3
         id: filter
         with:
@@ -26,37 +26,33 @@ jobs:
               - 'src/openpelo/**'
               - 'test/openpelo/**'
 
-  test-copilot:
-    needs: changes
-    if: needs.changes.outputs.copilot == 'true' || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        baseImage:
-          - ubuntu:22.04
-          - ubuntu:24.04
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install devcontainer CLI
-        run: npm install -g @devcontainers/cli
-      - name: Test copilot feature on ${{ matrix.baseImage }}
-        run: devcontainer features test --skip-scenarios -f copilot -i ${{ matrix.baseImage }} .
+      - name: Set features to test
+        id: set-features
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo 'features=["copilot","openpelo"]' >> $GITHUB_OUTPUT
+          else
+            echo 'features=${{ steps.filter.outputs.changes }}' >> $GITHUB_OUTPUT
+          fi
 
-  test-openpelo:
+  test:
     needs: changes
-    if: needs.changes.outputs.openpelo == 'true' || github.event_name == 'workflow_dispatch'
+    if: needs.changes.outputs.features != '[]'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
+        feature: ${{ fromJson(needs.changes.outputs.features) }}
         baseImage:
           - ubuntu:22.04
           - ubuntu:24.04
     steps:
       - uses: actions/checkout@v4
+
       - name: Install devcontainer CLI
         run: npm install -g @devcontainers/cli
-      - name: Test openpelo feature on ${{ matrix.baseImage }}
-        run: devcontainer features test --skip-scenarios -f openpelo -i ${{ matrix.baseImage }} .
+
+      - name: Test ${{ matrix.feature }} on ${{ matrix.baseImage }}
+        run: devcontainer features test --skip-scenarios -f ${{ matrix.feature }} -i ${{ matrix.baseImage }} .
+
 
