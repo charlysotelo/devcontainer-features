@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/charlysotelo/devcontainer-features/compare/openpelo-v1.0.3...openpelo-v1.0.4) (2026-05-17)
+
+
+### Bug Fixes
+
+* **openpelo:** install libgl1-mesa-dri for software EGL/llvmpipe renderer ([4fa4e03](https://github.com/charlysotelo/devcontainer-features/commit/4fa4e03237ebdbb534c1b0649b1f8847d98e56d6))
+
 ## [1.0.3](https://github.com/charlysotelo/devcontainer-features/compare/openpelo-v1.0.2...openpelo-v1.0.3) (2026-05-17)
 
 
