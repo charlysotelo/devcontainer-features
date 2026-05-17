@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
+# Installs OpenPelo from the latest (or pinned) GitHub release.
 VERSION="${VERSION:-"latest"}"
 INSTALL_DIR="/opt/openpelo"
 
