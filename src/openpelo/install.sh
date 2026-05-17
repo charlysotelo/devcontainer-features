@@ -28,7 +28,8 @@ apt-get install -y --no-install-recommends \
     libxrender1 \
     libxtst6 \
     libegl1 \
-    libgl1
+    libgl1 \
+    libgl1-mesa-dri
 update-ca-certificates
 
 if [ "${VERSION}" = "latest" ]; then
