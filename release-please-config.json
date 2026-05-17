@@ -41,6 +41,30 @@
           "jsonpath": "$.version"
         }
       ]
+    },
+    "src/bitwarden-cli": {
+      "release-type": "simple",
+      "component": "bitwarden-cli",
+      "changelog-path": "src/bitwarden-cli/CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "src/bitwarden-cli/devcontainer-feature.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "src/atuin": {
+      "release-type": "simple",
+      "component": "atuin",
+      "changelog-path": "src/atuin/CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "src/atuin/devcontainer-feature.json",
+          "jsonpath": "$.version"
+        }
+      ]
     }
   }
 }

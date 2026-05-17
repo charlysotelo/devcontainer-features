@@ -1,0 +1,14 @@
+{
+    "id": "bitwarden-cli",
+    "version": "1.0.0",
+    "name": "Bitwarden CLI",
+    "description": "Installs the Bitwarden CLI (bw), fetching the latest release from github.com/bitwarden/clients.",
+    "documentationURL": "https://bitwarden.com/help/cli/",
+    "licenseURL": "https://github.com/bitwarden/clients/blob/main/LICENSE.txt",
+    "keywords": [
+        "bitwarden",
+        "bw",
+        "password-manager",
+        "secrets"
+    ]
+}

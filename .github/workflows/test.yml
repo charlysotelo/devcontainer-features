@@ -28,12 +28,18 @@ jobs:
             talosctl:
               - 'src/talosctl/**'
               - 'test/talosctl/**'
+            bitwarden-cli:
+              - 'src/bitwarden-cli/**'
+              - 'test/bitwarden-cli/**'
+            atuin:
+              - 'src/atuin/**'
+              - 'test/atuin/**'
 
       - name: Set features to test
         id: set-features
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo 'features=["copilot","openpelo","talosctl"]' >> $GITHUB_OUTPUT
+            echo 'features=["copilot","openpelo","talosctl","bitwarden-cli","atuin"]' >> $GITHUB_OUTPUT
           else
             echo 'features=${{ steps.filter.outputs.changes }}' >> $GITHUB_OUTPUT
           fi

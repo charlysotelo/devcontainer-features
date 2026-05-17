@@ -1,0 +1,15 @@
+{
+    "id": "atuin",
+    "version": "1.0.0",
+    "name": "Atuin",
+    "description": "Installs Atuin, a magical shell history replacement backed by a SQLite database.",
+    "documentationURL": "https://atuin.sh",
+    "licenseURL": "https://github.com/atuinsh/atuin/blob/main/LICENSE",
+    "keywords": [
+        "atuin",
+        "shell",
+        "history",
+        "zsh",
+        "bash"
+    ]
+}
