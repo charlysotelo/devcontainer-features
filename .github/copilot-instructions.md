@@ -45,27 +45,4 @@ CI runs against both `ubuntu:22.04` and `ubuntu:24.04` on every push and PR.
 
 ## Releases & Versioning
 
-Releases are automated via [release-please](https://github.com/googleapis/release-please) in manifest mode. **Commit messages must follow [Conventional Commits](https://www.conventionalcommits.org/).**
-
-Each package versions independently:
-- `src/copilot` — bumps only when commits touch files under `src/copilot/` or `test/copilot/`
-- `src/openpelo` — bumps only when commits touch files under `src/openpelo/` or `test/openpelo/`
-- `.` (root) — bumps on any commit to `main`
-
-Common types:
-- `fix: ...` → patch bump
-- `feat: ...` → minor bump
-- `feat!: ...` or `BREAKING CHANGE:` footer → major bump
-
-Use scopes to clarify which feature a commit targets (e.g. `fix(openpelo): ...`), though release-please determines the affected package from the changed file paths, not the scope.
-
-Version files: `version.txt` is the primary version file per package. `devcontainer-feature.json` is kept in sync automatically as an extra-file.
-
-## Adding a New Feature
-
-1. Create `src/<feature-name>/devcontainer-feature.json` and `install.sh`
-2. Create `test/<feature-name>/test.sh`
-3. Create `src/<feature-name>/version.txt` with initial value `1.0.0`
-4. Add a job for the feature in `.github/workflows/test.yml`: add an entry to the `filters` in the `changes` job, and add the feature name to the `workflow_dispatch` hardcoded array
-5. Add the feature as a package in `release-please-config.json` and seed its version in `.release-please-manifest.json`
-6. Add a row to the features table in `README.md`
+Releases are automated via release-please using conventional commits. See [CONTRIBUTING.md](../CONTRIBUTING.md) for commit types, the release flow, and the full checklist for adding a new feature.
