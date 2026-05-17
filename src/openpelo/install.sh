@@ -26,7 +26,9 @@ apt-get install -y --no-install-recommends \
     libxi6 \
     libxrandr2 \
     libxrender1 \
-    libxtst6
+    libxtst6 \
+    libegl1 \
+    libgl1
 update-ca-certificates
 
 if [ "${VERSION}" = "latest" ]; then
