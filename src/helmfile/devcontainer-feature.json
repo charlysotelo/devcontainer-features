@@ -1,0 +1,25 @@
+{
+    "id": "helmfile",
+    "version": "1.0.0",
+    "name": "Helmfile",
+    "description": "Installs Helmfile, a declarative spec for deploying Helm charts. Useful for managing a fleet of Helm releases as infrastructure-as-code.",
+    "documentationURL": "https://helmfile.readthedocs.io",
+    "licenseURL": "https://github.com/helmfile/helmfile/blob/main/LICENSE",
+    "keywords": [
+        "helmfile",
+        "helm",
+        "kubernetes",
+        "k8s",
+        "gitops"
+    ],
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Version of Helmfile to install (e.g. '1.1.0' or 'v1.1.0'). Use 'latest' for the most recent release."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube"
+    ]
+}

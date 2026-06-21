@@ -53,6 +53,18 @@
           "jsonpath": "$.version"
         }
       ]
+    },
+    "src/helmfile": {
+      "release-type": "simple",
+      "component": "helmfile",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "devcontainer-feature.json",
+          "jsonpath": "$.version"
+        }
+      ]
     }
   }
 }
