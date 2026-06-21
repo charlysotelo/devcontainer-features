@@ -1,8 +1,8 @@
 {
-  ".": "2.0.3",
+  ".": "2.1.0",
   "src/openpelo": "1.0.5",
   "src/talosctl": "1.0.0",
   "src/bitwarden-cli": "1.1.1",
   "src/atuin": "1.1.1",
-  "src/helmfile": "1.0.0"
+  "src/helmfile": "1.1.0"
 }
