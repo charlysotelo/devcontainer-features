@@ -31,12 +31,15 @@ jobs:
             atuin:
               - 'src/atuin/**'
               - 'test/atuin/**'
+            helmfile:
+              - 'src/helmfile/**'
+              - 'test/helmfile/**'
 
       - name: Set features to test
         id: set-features
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo 'features=["openpelo","talosctl","bitwarden-cli","atuin"]' >> $GITHUB_OUTPUT
+            echo 'features=["openpelo","talosctl","bitwarden-cli","atuin","helmfile"]' >> $GITHUB_OUTPUT
           else
             echo 'features=${{ steps.filter.outputs.changes }}' >> $GITHUB_OUTPUT
           fi
