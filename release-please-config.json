@@ -65,6 +65,78 @@
           "jsonpath": "$.version"
         }
       ]
+    },
+    "src/apt-packages": {
+      "release-type": "simple",
+      "component": "apt-packages",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "devcontainer-feature.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "src/kubectl": {
+      "release-type": "simple",
+      "component": "kubectl",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "devcontainer-feature.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "src/kustomize": {
+      "release-type": "simple",
+      "component": "kustomize",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "devcontainer-feature.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "src/minikube": {
+      "release-type": "simple",
+      "component": "minikube",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "devcontainer-feature.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "src/protoc": {
+      "release-type": "simple",
+      "component": "protoc",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "devcontainer-feature.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    },
+    "src/go-install": {
+      "release-type": "simple",
+      "component": "go-install",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "devcontainer-feature.json",
+          "jsonpath": "$.version"
+        }
+      ]
     }
   }
 }

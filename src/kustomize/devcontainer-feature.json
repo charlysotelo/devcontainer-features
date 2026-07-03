@@ -1,0 +1,23 @@
+{
+    "id": "kustomize",
+    "version": "1.0.0",
+    "name": "Kustomize",
+    "description": "Installs kustomize, the Kubernetes native configuration customization tool.",
+    "documentationURL": "https://kubectl.docs.kubernetes.io/references/kustomize/",
+    "licenseURL": "https://github.com/kubernetes-sigs/kustomize/blob/master/LICENSE",
+    "keywords": [
+        "kustomize",
+        "kubernetes",
+        "k8s"
+    ],
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Version of kustomize to install (for example: 'v5.6.0'). Use 'latest' for the most recent release."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/charlysotelo/devcontainer-features/kubectl"
+    ]
+}

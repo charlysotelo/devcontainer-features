@@ -1,0 +1,20 @@
+{
+    "id": "kubectl",
+    "version": "1.0.0",
+    "name": "kubectl",
+    "description": "Installs kubectl, the Kubernetes command-line tool.",
+    "documentationURL": "https://kubernetes.io/docs/reference/kubectl/",
+    "licenseURL": "https://github.com/kubernetes/kubectl/blob/master/LICENSE",
+    "keywords": [
+        "kubectl",
+        "kubernetes",
+        "k8s"
+    ],
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Version of kubectl to install (for example: 'v1.30.0'). Use 'latest' for the current stable release."
+        }
+    }
+}

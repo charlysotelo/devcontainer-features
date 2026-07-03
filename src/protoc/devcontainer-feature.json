@@ -1,0 +1,20 @@
+{
+    "id": "protoc",
+    "version": "1.0.0",
+    "name": "Protocol Buffers Compiler",
+    "description": "Installs protoc, the Protocol Buffers compiler, from official GitHub releases.",
+    "documentationURL": "https://protobuf.dev/",
+    "licenseURL": "https://github.com/protocolbuffers/protobuf/blob/main/LICENSE",
+    "keywords": [
+        "protobuf",
+        "protoc",
+        "grpc"
+    ],
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Version of protoc to install (for example: '29.3' or 'v29.3'). Use 'latest' for the newest release."
+        }
+    }
+}
