@@ -25,6 +25,7 @@ if [ "${VERSION}" = "latest" ]; then
     VERSION="$(curl -fsSL https://api.github.com/repos/kubernetes-sigs/kustomize/releases/latest \
         | grep '"tag_name"' | head -1 | sed -E 's/.*"([^\"]+)".*/\1/')"
 fi
+VERSION="${VERSION#kustomize/}"
 
 if [ -z "${VERSION}" ]; then
     echo "Could not determine kustomize version to install." >&2

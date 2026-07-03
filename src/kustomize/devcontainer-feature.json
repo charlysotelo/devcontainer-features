@@ -16,8 +16,5 @@
             "default": "latest",
             "description": "Version of kustomize to install (for example: 'v5.6.0'). Use 'latest' for the most recent release."
         }
-    },
-    "installsAfter": [
-        "ghcr.io/charlysotelo/devcontainer-features/kubectl"
-    ]
+    }
 }

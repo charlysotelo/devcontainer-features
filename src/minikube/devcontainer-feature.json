@@ -16,8 +16,5 @@
             "default": "latest",
             "description": "Version of minikube to install (for example: 'v1.34.0'). Use 'latest' for the newest release."
         }
-    },
-    "installsAfter": [
-        "ghcr.io/charlysotelo/devcontainer-features/kubectl"
-    ]
+    }
 }
