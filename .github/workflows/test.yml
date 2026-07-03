@@ -71,7 +71,6 @@ jobs:
       matrix:
         feature: ${{ fromJson(needs.changes.outputs.features) }}
         baseImage:
-          - ubuntu:22.04
           - ubuntu:24.04
     steps:
       - uses: actions/checkout@v4
