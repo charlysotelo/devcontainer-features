@@ -1,0 +1,22 @@
+{
+    "id": "go-install",
+    "version": "1.0.0",
+    "name": "go install packages",
+    "description": "Installs comma-delimited Go command packages using 'go install'.",
+    "documentationURL": "https://pkg.go.dev/cmd/go#hdr-Compile_and_install_packages_and_dependencies",
+    "keywords": [
+        "go",
+        "golang",
+        "go-install"
+    ],
+    "options": {
+        "packages": {
+            "type": "string",
+            "default": "",
+            "description": "Comma-space delimited Go package specs to install, for example: 'github.com/go-delve/delve/cmd/dlv@latest'."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/go"
+    ]
+}

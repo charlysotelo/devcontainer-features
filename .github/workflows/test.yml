@@ -34,12 +34,30 @@ jobs:
             helmfile:
               - 'src/helmfile/**'
               - 'test/helmfile/**'
+            apt-packages:
+              - 'src/apt-packages/**'
+              - 'test/apt-packages/**'
+            kubectl:
+              - 'src/kubectl/**'
+              - 'test/kubectl/**'
+            kustomize:
+              - 'src/kustomize/**'
+              - 'test/kustomize/**'
+            minikube:
+              - 'src/minikube/**'
+              - 'test/minikube/**'
+            protoc:
+              - 'src/protoc/**'
+              - 'test/protoc/**'
+            go-install:
+              - 'src/go-install/**'
+              - 'test/go-install/**'
 
       - name: Set features to test
         id: set-features
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo 'features=["openpelo","talosctl","bitwarden-cli","atuin","helmfile"]' >> $GITHUB_OUTPUT
+            echo 'features=["openpelo","talosctl","bitwarden-cli","atuin","helmfile","apt-packages","kubectl","kustomize","minikube","protoc","go-install"]' >> $GITHUB_OUTPUT
           else
             echo 'features=${{ steps.filter.outputs.changes }}' >> $GITHUB_OUTPUT
           fi
@@ -53,7 +71,6 @@ jobs:
       matrix:
         feature: ${{ fromJson(needs.changes.outputs.features) }}
         baseImage:
-          - ubuntu:22.04
           - ubuntu:24.04
     steps:
       - uses: actions/checkout@v4

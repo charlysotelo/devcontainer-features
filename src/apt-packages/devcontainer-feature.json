@@ -1,0 +1,19 @@
+{
+    "id": "apt-packages",
+    "version": "1.0.0",
+    "name": "APT packages",
+    "description": "Installs comma-delimited apt packages on Debian/Ubuntu-based dev containers.",
+    "keywords": [
+        "apt",
+        "packages",
+        "ubuntu",
+        "debian"
+    ],
+    "options": {
+        "packages": {
+            "type": "string",
+            "default": "",
+            "description": "Comma-space delimited packages to install, for example: 'curl, git, unzip'."
+        }
+    }
+}

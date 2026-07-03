@@ -1,0 +1,20 @@
+{
+    "id": "minikube",
+    "version": "1.0.0",
+    "name": "Minikube",
+    "description": "Installs minikube for running local Kubernetes clusters.",
+    "documentationURL": "https://minikube.sigs.k8s.io/docs/",
+    "licenseURL": "https://github.com/kubernetes/minikube/blob/master/LICENSE",
+    "keywords": [
+        "minikube",
+        "kubernetes",
+        "k8s"
+    ],
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Version of minikube to install (for example: 'v1.34.0'). Use 'latest' for the newest release."
+        }
+    }
+}
