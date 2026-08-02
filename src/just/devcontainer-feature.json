@@ -1,0 +1,20 @@
+{
+    "id": "just",
+    "version": "1.0.0",
+    "name": "just",
+    "description": "Installs just, a handy command runner for saving and running project-specific commands.",
+    "documentationURL": "https://just.systems",
+    "licenseURL": "https://github.com/casey/just/blob/master/LICENSE",
+    "keywords": [
+        "just",
+        "task-runner",
+        "command-runner"
+    ],
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Version of just to install (for example: '1.36.0'). Use 'latest' for the newest release."
+        }
+    }
+}

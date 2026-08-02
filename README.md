@@ -17,6 +17,7 @@ Personal collection of [Dev Container Features](https://containers.dev/implement
 | [minikube](src/minikube) | Installs [minikube](https://minikube.sigs.k8s.io/docs/) for local Kubernetes clusters |
 | [protoc](src/protoc) | Installs [protoc](https://protobuf.dev/), the Protocol Buffers compiler |
 | [go-install](src/go-install) | Installs comma-delimited Go command packages using `go install` |
+| [just](src/just) | Installs [just](https://just.systems), a handy command runner for saving and running project-specific commands |
 
 ## Usage
 
