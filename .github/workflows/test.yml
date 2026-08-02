@@ -52,12 +52,15 @@ jobs:
             go-install:
               - 'src/go-install/**'
               - 'test/go-install/**'
+            just:
+              - 'src/just/**'
+              - 'test/just/**'
 
       - name: Set features to test
         id: set-features
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo 'features=["openpelo","talosctl","bitwarden-cli","atuin","helmfile","apt-packages","kubectl","kustomize","minikube","protoc","go-install"]' >> $GITHUB_OUTPUT
+            echo 'features=["openpelo","talosctl","bitwarden-cli","atuin","helmfile","apt-packages","kubectl","kustomize","minikube","protoc","go-install","just"]' >> $GITHUB_OUTPUT
           else
             echo 'features=${{ steps.filter.outputs.changes }}' >> $GITHUB_OUTPUT
           fi
