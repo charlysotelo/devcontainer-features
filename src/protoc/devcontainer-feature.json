@@ -1,6 +1,6 @@
 {
     "id": "protoc",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "Protocol Buffers Compiler",
     "description": "Installs protoc, the Protocol Buffers compiler, from official GitHub releases.",
     "documentationURL": "https://protobuf.dev/",

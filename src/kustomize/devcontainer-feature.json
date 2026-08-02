@@ -1,6 +1,6 @@
 {
     "id": "kustomize",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "Kustomize",
     "description": "Installs kustomize, the Kubernetes native configuration customization tool.",
     "documentationURL": "https://kubectl.docs.kubernetes.io/references/kustomize/",

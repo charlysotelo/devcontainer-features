@@ -1,6 +1,6 @@
 {
     "id": "minikube",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "Minikube",
     "description": "Installs minikube for running local Kubernetes clusters.",
     "documentationURL": "https://minikube.sigs.k8s.io/docs/",
