@@ -25,6 +25,8 @@ fi
 
 echo "Installing Go packages: ${PACKAGE_LIST[*]}"
 mkdir -p /usr/local/bin
-GOBIN=/usr/local/bin "${GO_CMD}" install "${PACKAGE_LIST[@]}"
+for PACKAGE in "${PACKAGE_LIST[@]}"; do
+    GOBIN=/usr/local/bin "${GO_CMD}" install "${PACKAGE}"
+done
 
 echo "Done. Installed Go packages: ${PACKAGE_LIST[*]}"
