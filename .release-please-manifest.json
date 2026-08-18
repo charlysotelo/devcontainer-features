@@ -1,5 +1,5 @@
 {
-  ".": "2.2.0",
+  ".": "2.2.1",
   "src/openpelo": "1.0.5",
   "src/talosctl": "1.0.0",
   "src/bitwarden-cli": "1.1.1",
@@ -10,5 +10,5 @@
   "src/kustomize": "1.1.0",
   "src/minikube": "1.1.0",
   "src/protoc": "1.1.0",
-  "src/go-install": "1.1.0"
+  "src/go-install": "1.1.1"
 }

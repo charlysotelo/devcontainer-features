@@ -1,6 +1,6 @@
 {
     "id": "go-install",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "name": "go install packages",
     "description": "Installs comma-delimited Go command packages using 'go install'.",
     "documentationURL": "https://pkg.go.dev/cmd/go#hdr-Compile_and_install_packages_and_dependencies",
